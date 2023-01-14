@@ -1,5 +1,6 @@
-/* 
-
+main{
+    /* background-color: #F0997D;     */
+}
 .card{
     margin: 4%;
     padding: 2%;
@@ -19,4 +20,4 @@
 .card img{
     height: 250px;
     width: 250px;
-} */
+}
