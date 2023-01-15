@@ -1,0 +1,27 @@
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.card{
+    width: 18rem;
+    margin: 5%;
+    padding: 1%
+    
+}
+
+.card img{
+    height: 210px;
+    width: 210px;
+    margin: 1%;
+}
+
+.btn{
+    width: 100%;
+}
+
+
+
+
+
