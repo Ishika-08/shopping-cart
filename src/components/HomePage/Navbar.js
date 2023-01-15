@@ -14,7 +14,7 @@ export default function Main(){
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link><Link to="/">Home</Link></Nav.Link>
             <Nav.Link><Link to="/cart"><FontAwesomeIcon icon={faCartShopping} /></Link></Nav.Link>
           </Nav>
         </Navbar.Collapse>

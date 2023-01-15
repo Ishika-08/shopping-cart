@@ -11,14 +11,48 @@ function App() {
   function handleClick(card){
 
     setCartItem(prev => {
-      return [...prev, {...card}]});
-    // setCartItem(prev=>{
-    //   let prevValue = prev;
-    //   prevValue.push(card);
-    // })
-    console.log(cartItem)
-    console.log(card);
+      const itemExists = prev.find(element => element.id === card.id);
+      if(itemExists){
+        alert("Item already exists in the cart")
+        return [...prev]
+      }
+      else{
+        return [...prev, {...card, quantity:1}]
+      }
+    })
   }
+
+  function handleIncrease(data){
+    setCartItem(prev =>{
+      return prev.map( element => {
+        if(element.id === data.id){
+          console.log(element)
+          return {...element, quantity: element.quantity + 1}
+        }
+        else{
+          return {...element}
+        }
+      }
+      )
+    }
+    )
+  }
+
+  function handleDecrease(data){
+    setCartItem(prev =>{
+      return prev.map( element => {
+        if(element.id === data.id){
+          return {...element, quantity: element.quantity - 1}
+        }
+        else{
+          return {...element}
+        }
+      }
+      )
+    }
+    )
+  }
+
 
 
   return (
@@ -26,7 +60,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Content onClick={handleClick}/>}/>
-        <Route path="/cart" element={<Cart cartItems={cartItem} onClick={handleClick}/>}/>
+        <Route path="/cart" element={<Cart cartItems={cartItem} onClick={handleClick} Increase={handleIncrease} Decrease={handleDecrease}/>}/>
         </Routes>
     </BrowserRouter>
       
