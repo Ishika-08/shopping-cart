@@ -57,12 +57,14 @@ function App() {
   }
 
   function handleRemoveProduct(data){
-    const RemovedItemIndex = cartItem.filter(element => {
-      if(element.id === data.id){
-        return (parseInt(element.id))
-      }  
+    const i = cartItem.indexOf(data);
+    cartItem.splice(i,1)
+
+    setCartItem(prev => {
+      console.log(i + "  length:" + prev.length)
+      console.log(prev)
+      return [...prev]
     })
-    setCartItem(cartItem.splice(RemovedItemIndex,1))
 
   }
 
