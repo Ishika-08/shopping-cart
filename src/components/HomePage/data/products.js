@@ -15,43 +15,43 @@ const info=[
         id: 3,
         img: "./images/galaxyA23.jfif",
         title: "Samsung Galaxy A23",
-        price: "16,890" 
+        price: "16890" 
     },
     {
         id: 4,
         img: "./images/galaxyF13.jfif",
         title: "Samsung Galxy F13",
-        price: "14,000"
+        price: "14000"
     },
     {
         id: 5,
         img: "./images/galaxyF23.jfif",
         title: "Samsung Galaxy F23",
-        price: "15,690"
+        price: "15690"
     },
     {
         id: 6,
         img: "./images/galaxyM13.jfif",
         title: "Samsung Galxy M13",
-        price: "20,000" 
+        price: "20000" 
     },
     {
         id: 7,
         img: "./images/galaxyS21.jfif",
         title: "Samsung Galaxy S21",
-        price: "21,560"
+        price: "21560"
     },
     {
         id: 8,
         img: "./images/keyboard.png",
         title: "Wirless Keyboard",
-        price: "1,299"
+        price: "1299"
     },
     {
         id: 9,
         img: "./images/keyboard2.jfif",
         title: "Gaming Keyboard",
-        price: "2,100"
+        price: "2100"
     },
     {
         id: 10,
@@ -63,49 +63,49 @@ const info=[
         id: 11,
         img: "./images/NokiaG21.jfif",
         title: "Nokia G21",
-        price: "17,899"
+        price: "17899"
     },
     {
         id: 12,
         img: "./images/onePlus.jfif",
         title: "One Plus headphones",
-        price: "2,199"
+        price: "2199"
     },
     {
         id: 13,
         img: "./images/oppoA15.jfif",
         title: "OPPO A15",
-        price: "20,100"
+        price: "20100"
     },
     {
         id: 14,
         img: "./images/oppoA31.jfif",
         title: "OPPO A31",
-        price: "19,999"
+        price: "19999"
     },
     {
         id: 15,
         img: "./images/redmiNote9.jfif",
         title: "Redmi Note 9",
-        price: "21,000"
+        price: "21000"
     },
     {
         id: 16,
         img: "./images/redmi9Pro.jfif",
         title: "Redmi 9 Pro",
-        price: "16,850"
+        price: "16850"
     },
     {
         id: 17,
         img: "./images/redmiNote11.jfif",
         title: "Redmi Note 11",
-        price: "17,650"
+        price: "17650"
     },
     {
         id: 18,
         img: "./images/redmiPrime9.jfif",
         title: "Redmi Prime 9",
-        price: "18,769"
+        price: "18769"
     }
 
 

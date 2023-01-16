@@ -2,8 +2,8 @@ import Card from 'react-bootstrap/Card';
 import Navbar from "../HomePage/Navbar"
 import "./Cart.css"
 
-export default function Cart({cartItems, Increase, Decrease}){
-    // const price = 0;
+export default function Cart({cartItems, Increase, Decrease, RemoveProduct, ClearCart}){
+    const totalPrice= cartItems.reduce((price, item) => price + item.quantity * item.price,0)
 
     return (
         <>
@@ -12,15 +12,25 @@ export default function Cart({cartItems, Increase, Decrease}){
 
             {cartItems.length === 0 && <div className="empty">No items are added to the cart</div>}
 
-            <div className="productContainer">
+        <div className="price-and-clear">
+            <Card className="total-card">
+                    <Card.Body>
+                        <Card.Title>Total:    ${totalPrice}</Card.Title>
+                    </Card.Body>
+            </Card>
 
+            {cartItems.length >= 1 && <button className="clear-button" onClick={ClearCart}>Clear Cart</button>}
+        </div>
+
+
+            <div className="productContainer">
                 {cartItems.map(item =>
                 <Card key={item.id}>
                     <Card.Img variant="top" src={item.img} />
                     <Card.Body>
                     <Card.Title>{item.title}</Card.Title>
                     <Card.Text>
-                        {parseInt(item.price)*item.quantity}
+                        ${parseInt(item.price)*item.quantity}
                     </Card.Text>
                     <div>Quantity: <br/><br/>
                         <div className="quantity">
@@ -29,23 +39,12 @@ export default function Cart({cartItems, Increase, Decrease}){
                         <button onClick={()=> Increase(item)}>+</button>
                         </div>
                     </div>
-                    <button className="btn">Remove</button>
+                    <button className="btn" onClick={() => RemoveProduct(item)}>Remove</button>
 
                     </Card.Body>
                 </Card>)}
-
-                <Card>
-                    <Card.Body>
-                        <Card.Title>Total:</Card.Title>
-                        {/* <Card.Text>{cartItems.map(element => price+ parseInt(element.price))}</Card.Text> */}
-                    </Card.Body>
-                </Card>
             </div>
         </>
     )
 }
 
-{/* <img src={item.img}/>
-                    <h1>{item.title}</h1>
-                    <h1>{item.price}</h1>
-                    <p>{item.quantity}</p> */}

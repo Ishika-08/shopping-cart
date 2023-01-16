@@ -17,7 +17,7 @@ function BasicExample(props) {
         <Card.Body>
           <Card.Title>{card.title}</Card.Title>
           <Card.Text>
-          {card.price}
+          ${card.price}
           </Card.Text>
           <Button className="btn" variant="primary" onClick={() => props.onClick(card)}>Add to Cart</Button>
         </Card.Body>

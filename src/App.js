@@ -26,7 +26,6 @@ function App() {
     setCartItem(prev =>{
       return prev.map( element => {
         if(element.id === data.id){
-          console.log(element)
           return {...element, quantity: element.quantity + 1}
         }
         else{
@@ -41,7 +40,7 @@ function App() {
   function handleDecrease(data){
     setCartItem(prev =>{
       return prev.map( element => {
-        if(element.id === data.id){
+        if(element.id === data.id && element.quantity !== 1){
           return {...element, quantity: element.quantity - 1}
         }
         else{
@@ -53,6 +52,20 @@ function App() {
     )
   }
 
+  function handleClearCart(){
+    setCartItem([]);
+  }
+
+  function handleRemoveProduct(data){
+    const RemovedItemIndex = cartItem.filter(element => {
+      if(element.id === data.id){
+        return (parseInt(element.id))
+      }  
+    })
+    setCartItem(cartItem.splice(RemovedItemIndex,1))
+
+  }
+
 
 
   return (
@@ -60,7 +73,20 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Content onClick={handleClick}/>}/>
-        <Route path="/cart" element={<Cart cartItems={cartItem} onClick={handleClick} Increase={handleIncrease} Decrease={handleDecrease}/>}/>
+        <Route 
+        path="/cart" 
+        element=
+        {
+          <Cart 
+          cartItems={cartItem} 
+          onClick={handleClick} 
+          Increase={handleIncrease} 
+          Decrease={handleDecrease} 
+          RemoveProduct={handleRemoveProduct}
+          ClearCart = {handleClearCart}
+          />
+        }
+        />
         </Routes>
     </BrowserRouter>
       

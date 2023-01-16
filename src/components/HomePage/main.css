@@ -4,11 +4,14 @@
 
 }
 
-.card{
+.cardContainer .card{
     width: 18rem;
     margin: 5%;
-    padding: 1%
-    
+    padding: 1%;
+}
+
+.cardContainer .card:hover{
+    box-shadow: 5px 5px 10px #EAE0DA;
 }
 
 .card img{
@@ -18,8 +21,36 @@
 }
 
 .btn{
+    margin-top: 10%;
     width: 100%;
+    background-color: #3A4F7A !important;
+    color: white !important;
 }
+
+.btn:hover{
+    background-color: #0081C9 !important;
+    color: #FF6E31 !important;
+    font-weight: bolder !important;
+    transition: ease-in-out;
+}
+
+/* for navbar */
+.navbar{
+    background-color: #0A2647;
+    color: #EAFDFC !important;
+    --bs-navbar-brand-color: white;
+}
+
+.navbar a{
+    color: white !important;
+    text-decoration: none !important;
+
+}
+
+.navbar-toggler-icon{
+    background-color: white;
+}
+
 
 
 
