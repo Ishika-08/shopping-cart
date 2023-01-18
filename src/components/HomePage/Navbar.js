@@ -10,15 +10,10 @@ export default function Main(){
   return (
     <Navbar className="navbar" expand="lg">
       <Container>
-      <Navbar.Brand className="Navbar-brand" href="#home">Shopping</Navbar.Brand>
-        <div className="justify-content-end">
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
+      <Navbar.Brand className="Navbar-brand" as={Link} to="/">Shopping</Navbar.Brand>
+        <div className="links justify-content-end">
+        <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/cart"><FontAwesomeIcon icon={faCartShopping} /></Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
         </div>
       </Container>
     </Navbar>

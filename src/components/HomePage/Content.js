@@ -9,6 +9,7 @@ import "./main.css"
 function BasicExample(props) {
     return (
       <>
+      <div>
       <Navbar/>
       <Container className="cardContainer">
       {info.map(card =>
@@ -26,6 +27,8 @@ function BasicExample(props) {
       )}
       
       </Container>
+      </div>
+
       </>
     );
   

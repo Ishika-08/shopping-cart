@@ -1,7 +1,7 @@
 /* Header */
 
 .heading{
- padding: 3%;
+ padding: 5% 3% 2%;
  font-size: 3rem;
  margin: auto;
 }
@@ -21,7 +21,7 @@
 
 .card{
     width: 18rem;
-    margin: 5%;
+    margin: 2% 5%;
     padding: 1%;
 }
 
@@ -78,10 +78,19 @@
     font-size: 1.5rem;
 }
 
-@media only screen and (max-width: 420){
+@media (max-width: 420px){
     *.price-and-clear{
         display: block !important;
         width: 90% !important;
-        
+    }
+
+    .clear-button{
+        width: 90%;
+        height: 40px !important;
+        margin: 5% 3%;
+
+    }
+    .heading{
+        padding-top: 15%;
     }
 }

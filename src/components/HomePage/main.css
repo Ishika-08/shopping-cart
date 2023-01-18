@@ -1,13 +1,15 @@
 .cardContainer{
     display: flex;
     flex-wrap: wrap;
+    padding-top: 5%;
 
 }
 
 .cardContainer .card{
     width: 18rem;
-    margin: 5%;
+    margin: 3% 5%;
     padding: 1%;
+
 }
 
 .cardContainer .card:hover{
@@ -36,6 +38,9 @@
 
 /* for navbar */
 .navbar{
+    position: fixed !important;
+    z-index: 1 !important;
+    width: 100%;
     background-color: #0A2647;
     color: #EAFDFC !important;
     --bs-navbar-brand-color: white;
@@ -47,11 +52,20 @@
 
 }
 
-.navbar-toggler-icon{
-    background-color: white;
+.links{
+    display: flex;
 }
 
+.links a{
+    padding: 0 20%;
+}
 
+@media (max-width: 420px) {
+    .cardContainer{
+        padding-top: 20%;
+    }
+    
+}
 
 
 
