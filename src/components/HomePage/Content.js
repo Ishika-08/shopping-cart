@@ -1,3 +1,4 @@
+import React from 'react'
 import Navbar from "./Navbar"
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
@@ -7,6 +8,12 @@ import "./main.css"
 
 
 function BasicExample(props) {
+  const [addToCart,setAddToCart]=React.useState("Add to Cart");
+  function handleClick(item){
+    //there is a bug , when you click on the button ,all of the button change there tag. Will send you an updat code on this. 
+    setAddToCart("Added to Cart")
+    console.log(item)
+  }
     return (
       <>
       <div>
@@ -20,7 +27,11 @@ function BasicExample(props) {
           <Card.Text>
           ${card.price}
           </Card.Text>
-          <Button className="btn" variant="primary" onClick={() => props.onClick(card)}>Add to Cart</Button>
+          <Button className="btn" variant="primary" onClick={() => {
+            props.onClick(card); 
+            handleClick(card.id);
+          }}>{addToCart}</Button>
+          {/* <Button className="btn" variant="primary" onClick={() => props.onClick(card) && handleClick()}>{addToCart}</Button> */}
         </Card.Body>
       </Card>
           
@@ -35,3 +46,5 @@ function BasicExample(props) {
 }
 
 export default BasicExample;
+
+

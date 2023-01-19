@@ -2,7 +2,7 @@ const info=[
     {
         id: 1,
         img:"./images/boat.jfif",
-        title: "Boat Wirless Headphone",
+        title: "Wirless Headphone",
         price: "1799"
     },
     {
@@ -111,4 +111,4 @@ const info=[
 
 ]
 
-export {info}
+export  {info}

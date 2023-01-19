@@ -9,7 +9,12 @@
     width: 18rem;
     margin: 3% 5%;
     padding: 1%;
+    align-items: center;
+}
 
+.card-body{
+    min-width: 223px;
+    text-align: center;
 }
 
 .cardContainer .card:hover{
